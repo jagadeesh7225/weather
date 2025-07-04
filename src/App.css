@@ -1,9 +1,7 @@
 .app-container {
   min-height: 100vh;
   background: #f0f4f8;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: block; /* Remove flex centering! */
   position: relative;
 }
 
@@ -24,9 +22,6 @@ button:hover {
 }
 
 .profile-bar {
-  position: absolute;
-  top: 24px;
-  left: 32px;
   z-index: 10;
 }
 
@@ -46,24 +41,21 @@ button:hover {
 }
 
 .greeting-bar {
-  position: absolute;
-  top: 24px;
-  left: 0;
-  width: 100%;
+  flex: 1;
   display: flex;
-  align-items: center;
   justify-content: center;
-  z-index: 9;
+  align-items: center;
+  margin-bottom: 24px;
 }
 
 .greeting {
   font-weight: bold;
-  font-size: 2.2rem;
+  font-size: 2rem;
   background: linear-gradient(90deg,#3498db,#8e44ad);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  margin-right: 24px;
+  margin: 0;
 }
 
 .logout-btn {
@@ -135,3 +127,93 @@ button:hover {
   text-align: center;
   word-break: break-all;
 }
+
+.home-btn {
+  background: #f3f6fb;
+  color: #2563eb;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  margin-bottom: 10px;
+  padding: 10px 0;
+  width: 100%;
+  transition: background 0.2s;
+}
+.home-btn:hover {
+  background: #e0eafc;
+}
+
+.weatherly-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #2563eb;
+  margin-bottom: 18px;
+  user-select: none;
+}
+
+.weatherly-name {
+  font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+  background: linear-gradient(90deg, #2563eb 60%, #74ebd5 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.weatherly-topright {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  z-index: 20;
+}
+
+.top-bar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 32px 0 32px; /* Less top padding */
+  box-sizing: border-box;
+  position: relative;
+  z-index: 30;
+  min-height: 80px;
+}
+
+.home-center {
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* Align content to the top with padding */
+  padding-top: 60px; /* Move content up */
+  /* Add background image */
+  background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1500&q=80') no-repeat center center;
+  background-size: cover;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(44,62,80,0.10);
+}
+
+.center-content {
+  height:70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 60px;
+  background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1500&q=80') no-repeat center center;
+  background-size: cover;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(44,62,80,0.10);
+  overflow-y: auto;
+}
+
+html, body {
+  overflow: hidden;
+}
+
