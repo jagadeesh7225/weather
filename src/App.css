@@ -78,7 +78,7 @@ button:hover {
 .profile-dropdown {
   position: absolute;
   top: 60px;
-  left: 0;
+  right: 0;
   min-width: 240px;
   background: #fff;
   border-radius: 12px;
