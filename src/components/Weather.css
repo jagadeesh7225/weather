@@ -1,0 +1,79 @@
+.weather-container {
+  background: #ffffff;
+  color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(30, 136, 229, 0.08);
+  padding: 28px 22px 22px 22px;
+  max-width: 500px;
+  margin: 40px auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.weather-container:hover {
+  box-shadow: 0 4px 16px rgba(30, 136, 229, 0.18);
+}
+
+.weather-container h2 {
+  color: #1976d2;
+  font-size: 2rem;
+  margin-bottom: 18px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.weather-form {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-bottom: 0; /* Remove bottom margin */
+  width: 100%;
+}
+
+.weather-output {
+  margin-top: 32px; /* Add space between form and output */
+  width: 100%;
+}
+
+.weather-container input[type="text"] {
+  border: 1.5px solid #90caf9;
+  border-radius: 6px;
+  padding: 10px 12px;
+  font-size: 1rem;
+  outline: none;
+  background: #fffcfc;
+  color: #000000;
+  flex: 1 1 0;
+  min-width: 0;
+  height: 48px;
+  box-sizing: border-box;
+}
+
+.weather-container input[type="text"]::placeholder {
+  color: #000000;
+}
+
+.weather-container button[type="submit"] {
+  background: #1976d2;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+  height: 48px;
+  width: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0;
+}
+
+.weather-container p {
+  color: #000000;
+  font-size: 1.08rem;
+  margin-top: 14px;
+}
